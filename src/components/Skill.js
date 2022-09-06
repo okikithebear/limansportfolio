@@ -39,19 +39,19 @@ return (
              I have very strong and technical skill set in various programming languages 
             </p>
             <Carousel responsive={responsive} infinite={true} className="skill-slider">
-               <div>
+               <div className='item'>
                 <img src={meter1} alt=""/>
                 <h5>Web Development</h5>
                 </div>
-                <div>
+                <div className='item'>
                 <img src={meter2} alt=""/>
                 <h5>Brand Identity</h5>
                 </div>
-                <div>
+                <div className='item'>
                 <img src={meter3} alt=""/>
                 <h5>Web Design</h5>
                 </div>
-                <div>
+                <div className='item'>
                 <img src={meter1} alt=""/>
                 <h5>Web Development</h5>
                 </div> 
