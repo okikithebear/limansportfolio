@@ -1,4 +1,4 @@
-import e from 'express';
+
 import React, {useState, useEffect} from 'react';
 import { Alert } from 'react-bootstrap';
 import {  Row, Col } from 'react-bootstrap';
@@ -10,7 +10,7 @@ if(status === 'success') clearFields();
 
 
     const [email, setEmail] = useState('');
-const handleSubmit =()=>{
+const handleSubmit =(e)=>{
     e.preventDeafult();
     email.indexOf("@") > -1 &&
     onValidated({

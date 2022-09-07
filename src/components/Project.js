@@ -4,6 +4,8 @@ import projImg2 from "../assets/images/project-img2.png";
 import projImg3 from "../assets/images/project-img3.png";
 import {Col, Tab, Container,  Row, Nav} from 'react-bootstrap';
 import colorSharp2 from '../assets/images/color-sharp2.png';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 import React from 'react'
 
 export const Projects = () => {
@@ -45,6 +47,9 @@ export const Projects = () => {
         <Container>
             <Row>
                 <Col>
+                <TrackVisibility>
+                {({ isVisible }) => 
+                <div className={isVisible ? "animate__animated animate__bounce": ""}>
                 <h2>
                     Projects
                 </h2>
@@ -62,7 +67,7 @@ export const Projects = () => {
                         </Nav.Link>
                     </Nav.Item>
                     </Nav>
-                    <Tab.Content>
+                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                         <Row>
                           {
@@ -79,6 +84,8 @@ export const Projects = () => {
                     <Tab.Pane eventKey="third">Lorem Ipsum</Tab.Pane>
                     </Tab.Content>
                     </Tab.Container>
+                    </div>}
+            </TrackVisibility>
                 </Col>
             </Row>
         </Container>
